@@ -20,7 +20,7 @@ function getSimulationDate() {
     return now;
 }
 
-// --- (Misma función fetchKunna que tenías) ---
+
 async function fetchKunna(timeStart, timeEnd) {
     const url = process.env.KUNNA_URL;
     if (!url) throw new Error("KUNNA_URL no está definida en el .env");
@@ -45,7 +45,7 @@ async function fetchKunna(timeStart, timeEnd) {
     return json.result; 
 }
 
-// --- (Misma función parseKunnaData que tenías) ---
+
 function parseKunnaData(rawResult, targetDate) {
     const { columns, values } = rawResult;
     const valueIndex = columns.indexOf('value'); 
